@@ -19,24 +19,24 @@ class AjouterAppartementType extends AbstractType
     {
         $builder
             ->add('superficie', NumberType::class, ['attr' => ['class' => 'form-control'], 'label_attr' => ['class' => 'fw-bold']])
-            ->add('descriptif', TextareaType::class, ['attr' => ['class'=> 'form-control'], 'label_attr' => ['class'=>'fw-bold']])
+            ->add('descriptif', TextareaType::class, ['attr' => ['class' => 'form-control'], 'label_attr' => ['class' => 'fw-bold']])
             ->add('immeuble', EntityType::class, [
-                'attr' => ['class'=> 'form-select' ], 
-                'label_attr' => ['class'=>'fw-bold'],
+                'attr' => ['class' => 'form-select'],
+                'label_attr' => ['class' => 'fw-bold'],
                 'class' => Immeuble::class,
                 'choice_label' => 'nom_immeuble',
                 'multiple' => false,
                 'expanded' => false,
             ],)
             ->add('categorie', EntityType::class, [
-                'attr' => ['class'=> 'form-select' ], 
-                'label_attr' => ['class'=>'fw-bold'],
+                'attr' => ['class' => 'form-select'],
+                'label_attr' => ['class' => 'fw-bold'],
                 'class' => Categorie::class,
                 'choice_label' => 'libelle_categorie',
                 'multiple' => false,
                 'expanded' => false,
             ],)
-            ->add('Ajouter', SubmitType::class, ['attr' => ['class'=> 'btn bg-primary text-white m-4' ], 'row_attr' => ['class' => 'text-center'],])  
+            ->add('Ajouter', SubmitType::class, ['attr' => ['class' => 'btn bg-primary text-white m-4'], 'row_attr' => ['class' => 'text-center'],])
         ;
     }
 

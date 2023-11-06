@@ -35,7 +35,7 @@ class AppartementController extends AbstractController
 
                 $em->persist($appartement);
                 $em->flush();
-                $this->addFlash('notice', 'Appartement cré');
+                $this->addFlash('notice', 'Appartement créé');
                 return $this->redirectToRoute('app_ajoutappartement');
             }
         }
